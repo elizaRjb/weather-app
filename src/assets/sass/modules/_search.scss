@@ -1,0 +1,81 @@
+.search {
+  max-width: 600px;
+  position: relative;
+  margin: 2.5rem auto 0;
+
+  @include e(form-control) {
+    width: 100%;
+    color: $black;
+    border-radius: 2px;
+    padding: 0.625rem 1rem;
+    background-color: $white;
+    border: 1px solid $mischka;
+    font: normal normal 1rem $font-family--secondary;
+
+    &:focus {
+      outline: none;
+      border-color: $burnt-sienna;
+    }
+
+    &::-moz-placeholder {
+      color: $rolling-stone;
+    }
+  
+    &::-webkit-input-placeholder {
+      color: $rolling-stone;
+    }
+  
+    &:-ms-input-placeholder {
+      color: $rolling-stone;
+    }
+  
+    &::placeholder {
+      color: $rolling-stone;
+    }
+  }
+
+  @include e(list) {
+    left: 1px;
+    top: 100%;
+    right: 1px;
+    overflow: auto;
+    max-height: 360px;
+    position: absolute;
+    background-color: $white;
+    -moz-box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+
+    li {
+      color: $black;
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      font: normal normal 0.875rem/1.4 $font-family--secondary;
+
+      &:hover {
+        background-color: rgba($havelock-blue, 0.15);
+      }
+
+      &.search__message {
+        cursor: default;
+        color: $rolling-stone;
+
+        &:hover {
+          background: none;
+        }
+      }
+    }
+  }
+
+  @include e(list-item) {
+    display: flex;
+
+    @include m(left) {
+      width: calc(100% - 1.25rem);
+    }
+
+    @include m(right) {
+      width: 1.25rem;
+    }
+  }
+}

@@ -1,0 +1,154 @@
+.card {
+  color: $black;
+  padding: 0.75rem;
+  max-width: 600px;
+  border-radius: 4px;
+  margin: 2.5rem auto 0;
+  background-color: $white;
+  font-family: $font-family--secondary;
+  -moz-box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+
+  @include m(lg) {
+    padding: 0.75rem 0;
+  }
+
+  @include e(row) {
+    margin: 0 -0.75rem;
+
+    @include m(sm) {
+      display: flex;
+    }
+
+    @include mq(sm) {
+      display: flex;
+    }
+  }
+
+  @include e(col) {
+    padding: 0.75rem;
+
+    @include m(sm) {
+      width: 50%;
+      padding: 0.5rem 0.75rem;
+    }
+
+    @include mq(sm) {
+      width: 50%;
+    }
+
+    @include m(left) {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 5rem;
+      }
+
+      @include mq(sm) {
+        width: 35%;
+      }
+
+      @include mq(md) {
+        width: 40%;
+      }
+    }
+
+    @include m(right) {
+      @include mq(sm) {
+        width: 65%;
+      }
+
+      @include mq(md) {
+        width: 60%;
+      }
+    }
+  }
+
+  @include e(heading) {
+    font: normal bold 1.25rem $font-family--primary;
+
+    @include m(lg) {
+      padding: 0 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+  }
+
+  @include e(sub-text) {
+    font-size: 0.75rem;
+    color: $rolling-stone;
+  }
+
+  @include e(block-heading) {
+    font: normal bold 1rem $font-family--primary;
+  }
+
+  @include e(details) {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 6.25rem;
+      margin-right: 0.5rem;
+    }
+
+    span {
+      font-size: 2.125rem;
+    }
+  }
+
+  @include e(main-text) {
+    color: $rolling-stone;
+    text-transform: capitalize;
+    font: normal bold 1rem $font-family--primary;
+
+    @include mq(md) {
+      font-size: 1.25rem;
+    }
+  }
+
+  @include e(list) {
+    li {
+      display: flex;
+      padding: 0.5rem;
+      font-size: 1rem;
+      border-bottom: 1px solid $porcelain;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  @include e(list-col) {
+    width: 50%;
+    font-weight: bold;
+
+    &:last-child {
+      text-align: right;
+      font-weight: normal;
+    }
+  }
+
+  @include e(long-list) {
+    li {
+      font-size: 1rem;
+      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid $mischka;
+
+      @include mq(md) {
+        padding: 0.75rem 1rem;
+      }
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  @include e(description) {
+    display: flex;
+    align-items: center;
+  }
+}
